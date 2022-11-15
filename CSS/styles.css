@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
-.header {
+.navbar {
   display: flex;
   background-color: #323232;
   height: 48px;
@@ -17,7 +17,7 @@ body {
   justify-content: space-between;
 }
 
-.logo__img {
+.header__logo {
   height: 20px;
   width: 15px;
 }
@@ -34,7 +34,6 @@ body {
 .menu__item {
   color: white;
   text-decoration: none;
-  background-color: #323232;
 }
 
 .banners-container {
@@ -64,19 +63,47 @@ body {
 }
 
 footer {
-  display: flex;
   justify-content: center;
-}
-
-.disclaimer {
-  color: grey;
   font-size: small;
-  text-align: justify;
+  color: grey;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+.disclaimer {
+  font-size: small;
+  text-align: justify;
+}
+
+.directory p {
+  display: none;
+}
+
+.footer__info--items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80% p;
+  width-padding-right: 15px;
+}
+
 @media screen and (min-width: 620px) {
+  .directory {
+    display: flex;
+    text-align: center;
+  }
+  .directory p {
+    display: block;
+  }
+  .directory hr {
+    display: block;
+  }
+  .directory .directory__list {
+    width: 33.33%;
+  }
+  .directory span {
+    display: none;
+  }
   .small-banners-container {
     width: 100%;
     display: grid;
@@ -86,7 +113,7 @@ footer {
     width: auto;
     min-width: auto;
   }
-  .header {
+  .navbar {
     display: flex;
     justify-content: space-evenly;
   }
@@ -102,20 +129,12 @@ footer {
   .fa-solid.fa-bars {
     display: none;
   }
-  .disclaimer {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }
 @media screen and (min-width: 830px) {
-  .header {
+  .navbar {
     padding-left: 200px;
     padding-right: 200px;
     justify-content: space-evenly;
-  }
-  .disclaimer {
-    padding-left: 200px;
-    padding-right: 200px;
   }
   .menu__item {
     margin-left: 20px;

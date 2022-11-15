@@ -1,9 +1,9 @@
 body {
     margin:0;
-    font-family: Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color:white;
 }
-.header {
+.navbar {
     display: flex;
     background-color: #323232;
     height: 48px;
@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.logo__img{
+.header__logo{
     height: 20px;
     width:15px;
 
@@ -30,7 +30,6 @@ body {
 .menu__item{
     color:white;
     text-decoration: none;
-    background-color: #323232;
 }
 .banners-container{
     display: flex;
@@ -50,43 +49,68 @@ body {
     flex-direction: column;
     background-color: white;
 }
-// .img-container{
-//     min-width:240px;
-//     min-height:220px;
-// }
+
 .small-banners-container__item{
     max-width: 100%;
     max-height: 100%;
 }
 
 footer{
-    display:flex;
-    justify-content: center
-}
-.disclaimer{
-    color:grey;
+    justify-content: center;
     font-size: small;
-    text-align: justify;
+    color:grey;
     padding-left: 15px;
     padding-right: 15px;
+}
+.disclaimer{
+    font-size: small;
+    text-align: justify;
+}
+.directory p{
+    display:none;  
+}
+.footer__info--items{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:80%
+    p{
+        padding-right: 15px;
+    }
 }
 
 
 
 @media screen and (min-width:620px){
+    .directory{
+        display: flex;
+        text-align: center;
+        
+        p{
+            display: block;
+        }
+        hr{
+            display:block
+        }
+        .directory__list{
+            width:33.33%
+        }
+        span{
+            display:none;
+        }
+    }
+    
     .small-banners-container{
         width: 100%;
         display:grid;
         grid-template-columns: 1fr 1fr;
     }
-    // .img-container{
-    //     min-width: 220px;
-    // }
+    
     .small-banners-container__item{
         width: auto;
         min-width: auto;
     }
-    .header{
+    .navbar{
         display:flex;
         justify-content: space-evenly;
     }
@@ -104,23 +128,17 @@ footer{
         display: none;
 
     }
-    .disclaimer{
-        padding-left: 50px;
-        padding-right: 50px;
-    }
+    
     
 }
 
 @media screen and (min-width:830px){
-    .header{
+    .navbar{
         padding-left: 200px;
         padding-right: 200px;
         justify-content: space-evenly;
     }
-    .disclaimer{
-        padding-left: 200px;
-        padding-right: 200px;
-    }
+    
     .menu__item{
         margin-left: 20px;
         margin-right: 20px;
@@ -131,3 +149,7 @@ footer{
         max-height: 600px;
     }
 }
+// @media screen and (min-width:1024px){
+//     footer{
+//     }
+// }
