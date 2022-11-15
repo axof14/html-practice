@@ -2,9 +2,10 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  font-size: small;
 }
 
-.navbar {
+.header {
   display: flex;
   background-color: #323232;
   height: 48px;
@@ -26,7 +27,7 @@ body {
   color: #A7A9AC;
 }
 
-.menu {
+.header__menu {
   list-style: none;
   display: none;
 }
@@ -36,20 +37,20 @@ body {
   text-decoration: none;
 }
 
-.banners-container {
+.banner {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
 }
 
-.banners-container__item {
+.banner__img {
   min-width: 290px;
   min-height: 240px;
   max-height: 300px;
 }
 
-.small-banners-container {
+.small-banner {
   display: flex;
   align-items: center;
   align-content: center;
@@ -57,21 +58,19 @@ body {
   background-color: white;
 }
 
-.small-banners-container__item {
+.small-banner__img {
   max-width: 100%;
   max-height: 100%;
 }
 
 footer {
   justify-content: center;
-  font-size: small;
   color: grey;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .disclaimer {
-  font-size: small;
   text-align: justify;
 }
 
@@ -79,7 +78,7 @@ footer {
   display: none;
 }
 
-.footer__info--items {
+.footer__items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -104,20 +103,20 @@ footer {
   .directory span {
     display: none;
   }
-  .small-banners-container {
+  .small-banner {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .small-banners-container__item {
+  .small-banner__img {
     width: auto;
     min-width: auto;
   }
-  .navbar {
+  .header {
     display: flex;
     justify-content: space-evenly;
   }
-  .menu {
+  .header__menu {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -131,7 +130,7 @@ footer {
   }
 }
 @media screen and (min-width: 830px) {
-  .navbar {
+  .header {
     padding-left: 200px;
     padding-right: 200px;
     justify-content: space-evenly;
@@ -140,9 +139,16 @@ footer {
     margin-left: 20px;
     margin-right: 20px;
   }
-  .banners-container__item {
+  .banner__img {
     min-width: 290px;
     min-height: 240px;
+    max-height: 600px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__img {
+    min-width: 290px;
+    min-height: 350px;
     max-height: 600px;
   }
 }/*# sourceMappingURL=styles.css.map */
